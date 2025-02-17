@@ -29,7 +29,7 @@ void main() {
     //calculation
     if(attendence > 25)
     {
-        bonus=salary*0.5;
+        bonus=(salary/100.0f)*5.0f;
     }
     else if(attendence < 10){
         bonus=-1.0f*((salary/100)*50);
@@ -45,6 +45,7 @@ void main() {
     else if(attendence<15){
         strcpy(grade,"need to be improvement");
     }
+    //details 
     printf("\t ID %d\n",id);
     printf("\t name %s \n",name);
     printf("\t salary %f\n",salary);
