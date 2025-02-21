@@ -6,7 +6,7 @@
 typedef Employee ElementType;
 typedef struct {
     ElementType elements[STACK_SIZE];
-    int _size;
+    //int _size;
 
     int _top;
 } Stack;
