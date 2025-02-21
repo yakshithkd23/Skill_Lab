@@ -58,6 +58,7 @@ void displayEmployees(Employee emp[], int n) {
 }
 
 void displayEmployeesUsingStack(Employee emp[], int n) {
+    
     Stack stk;
     StackInit(&stk);
     for(int I = 0; I < n; I++) {
