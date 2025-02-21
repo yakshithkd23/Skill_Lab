@@ -1,7 +1,7 @@
 #include "stack.h"
 #include<stdio.h>
 void StackInit(Stack* stk) {
-    stk->_size = 0;
+    //stk->_size = 0;
     stk->_top = -1;
 }
 ElementType StackTop(Stack* stk) {
@@ -9,13 +9,18 @@ ElementType StackTop(Stack* stk) {
 }
 
 int StackEmpty(Stack* stk) {
-    return (stk->_top == -1);
+    if(stk->_top==-1)
+    return 1;
+    else
+    return 0;
+    // return (stk->_top == -1);
 }
 
 void StackPush(Stack* stk, ElementType element) {
-    stk->elements[stk->_size] = element;
-    stk->_size++;
-    stk->_top++;
+    ++stk->_top;
+    stk->elements[stk->_top] = element;
+    //stk->_size++;
+    // stk->_top++;
 }
 
 void StackPop(Stack* stk) {
@@ -23,6 +28,6 @@ void StackPop(Stack* stk) {
         printf("Stack Empty\n");
         return;
     } 
-    stk->_size--;
+    //stk->_size--;
     stk->_top--;
 }
